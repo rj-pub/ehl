@@ -24,10 +24,12 @@ description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
+# original settings for GitHub Pages via Action
 # url: "https://rj-pub.github.io/ehl" # the base hostname & protocol for your site, e.g. http://example.com
 # baseurl: "/ehl" # the subpath of your site, e.g. /blog
 url: "https://ehl.pages.dev"
 baseurl: ""
+
 # twitter_username: jekyllrb
 # github_username:  jekyll
 minimal_mistakes_skin: dark
@@ -98,8 +100,8 @@ sass:
 
 
 # Outputting
-permalink: /:categories/:title/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+permalink: /:title/
+timezone: America/Los_Angeles # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Pagination with jekyll-paginate

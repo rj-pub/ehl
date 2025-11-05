@@ -4,4 +4,6 @@
 
 layout: home
 entries_layout: grid
+header:
+    overlay_image: /assets/images/banner.jpg
 ---

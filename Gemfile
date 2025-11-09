@@ -18,12 +18,14 @@ gem "minimal-mistakes-jekyll"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-paginate"
+  # gem "jekyll-paginate"
   gem "jekyll-sitemap"
   gem "jekyll-gist"
   gem "jekyll-feed"
   gem "jemoji"
   gem "jekyll-include-cache"
+  gem "jekyll-paginate-v2"
+  gem "jekyll-archives"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

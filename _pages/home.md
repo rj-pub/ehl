@@ -1,0 +1,26 @@
+---
+layout: splash
+permalink: /
+hidden: true
+header:
+  overlay_image: /assets/images/banner.jpg
+  overlay_filter: 0.3
+---
+
+# Featured Posts
+{% include featured-posts.html %}
+
+# More Posts
+
+{% if paginator %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.posts %}
+{% endif %}
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% include documents-collection.html entries=posts type=entries_layout %}
+</div>
+
+{% include paginator.html %}

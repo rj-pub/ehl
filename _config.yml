@@ -18,12 +18,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
+title: Epic Home Lighting
 # email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Bring your home to life with these simple and easy lighting solutions.
 # original settings for GitHub Pages via Action
 # url: "https://rj-pub.github.io/ehl" # the base hostname & protocol for your site, e.g. http://example.com
 # baseurl: "/ehl" # the subpath of your site, e.g. /blog
@@ -45,21 +43,25 @@ theme: minimal-mistakes-jekyll
 
 # Plugins (previously gems:)
 plugins:
-  - jekyll-paginate
+  # - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  - jekyll-paginate-v2
+  - jekyll-archives
 
 # mimic GitHub Pages with --safe
 whitelist:
-  - jekyll-paginate
+  # - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  - jekyll-paginate-v2
+  - jekyll-archives
 
 
 # Defaults
@@ -76,6 +78,22 @@ defaults:
       share: true
       related: true
       show_date: true
+  # tag archive
+  - scope:
+      path: ""
+      type: tag
+    values:
+      header:
+        overlay_image: /assets/images/banner.jpg
+      comments: false
+  # category archive
+  - scope:
+      path: ""
+      type: category
+    values:
+      header:
+        overlay_image: /assets/images/banner.jpg
+      comments: false
 
 
 # Conversion
@@ -133,6 +151,24 @@ pagination:
   trail:
     before: 2
     after: 2
+
+
+category_archive:
+  type: jekyll-archives
+  path: /categories/
+tag_archive:
+  type: jekyll-archives
+  path: /tags/
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive-taxonomy
+    tag: archive-taxonomy
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
 
 
 # Reading Files
